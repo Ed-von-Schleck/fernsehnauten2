@@ -80,7 +80,7 @@ parser.add_argument("-r", "--remote", action="store_true", default=False)
 args = parser.parse_args()
 mongo_url_command = ["meteor", "mongo", "-U"]
 if args.remote:
-    mongo_url_command.append("fernsehnauten.meteor.com")
+    mongo_url_command.append("fernsehnauten2.meteor.com")
 if REMOTE_URL is not None:
     mongo_url_command.append(REMOTE_URL)
 
@@ -93,7 +93,7 @@ mongo_url = process.before.strip()
 process.close()
 print "using mongodb at:", mongo_url
 if args.remote:
-    db = Connection(mongo_url).fernsehnauten_meteor_com
+    db = Connection(mongo_url).fernsehnauten2_meteor_com
 else:
     db = Connection(mongo_url).meteor
 
