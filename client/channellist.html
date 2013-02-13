@@ -1,0 +1,5 @@
+<template name="channellist">
+  {{#each channels}}
+    <button class="channelbutton" id="{{this._id}}">{{this.display-name.[0].[0]}}</button>
+  {{/each}}
+</template>
